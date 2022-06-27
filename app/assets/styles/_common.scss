@@ -1,0 +1,649 @@
+// Import bootstrap so as to @extend the classes and utilities
+// provided by bootstrap
+@import './fonts';
+@import './color';
+@import './mixins';
+@import './variables';
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+* {
+  &:focus {
+    outline: none !important;
+  }
+}
+
+input {
+  color: $theme-text !important;
+
+  @include placeholder-color($theme-tertiary-text !important);
+  &[disabled] {
+    color: $theme-tertiary-text !important;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+table {
+  thead {
+    th {
+      font-size: 18px;
+    }
+  }
+}
+.step-wrapper {
+  margin-bottom: 30px;
+  font-size: 16px;
+
+  .step-number {
+    &.active-step {
+      display: inline-block;
+      text-align: center;
+      margin: 0 5px;
+      color: $white;
+      background-color: $brand-secondary;
+      @include circle(22px);
+    }
+  }
+}
+
+.theme-success {
+  color: $brand-tertiary !important;
+}
+.err-height {
+  margin-top: -35px;
+}
+
+.error-msg {
+  color: $error-msg !important;
+  padding: 0px;
+}
+
+.theme-white {
+  color: $white !important;
+}
+
+.form-control {
+  box-shadow: none !important;
+
+  &:disabled {
+    background-color: $theme-modal-tagbg;
+    cursor: not-allowed;
+  }
+}
+
+body {
+  font-size: 0.875rem !important;
+  background-color: $table-row-alt-bg !important;
+  color: $theme-primary-text;
+  font-family: 'Inter';
+}
+
+/////////---MODAL---///////// BEGINS ->
+$nero: #282828;
+
+.modal-open {
+  .modal {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    .modal-dialog {
+      .modal-content {
+        border: 1px solid transparent;
+        background-color: $white;
+        .modal-header {
+          border: 0;
+          padding: 30px;
+          background-color: $theme-table-nth;
+          @include box-shadow(0 3px 10px 0 rgba(144, 137, 137, 0.18));
+          > h5 {
+            width: 100%;
+            display: block;
+            position: relative;
+            font-weight: bold;
+            .modal-headername {
+              color: $brand-primary;
+              display: block;
+              font-size: 24px;
+              line-height: 1;
+              @extend .lato-bold;
+            }
+            .modal-close {
+              top: 4px;
+              right: 0;
+              color: $nero;
+              margin: 0;
+              cursor: pointer;
+              opacity: 1;
+              z-index: 1;
+              position: absolute;
+              font-size: 16px;
+              text-shadow: none;
+            }
+          }
+        }
+        .modal-body {
+          padding: 0 30px;
+        }
+        .modal-footer {
+          > * {
+            margin: 0;
+          }
+          border: 0;
+          padding: 20px 30px;
+          position: relative;
+          @include box-shadow(0 -3px 10px 0 rgba(144, 137, 137, 0.18));
+          button {
+            margin-bottom: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+/////////---MODAL---///////// ENDS <-
+
+/////////---TABLE---///////// BEGINS ->
+.dashboard-table-container {
+  .dashboard-table {
+    @include get-font($lato, 'regular');
+    @extend .mb-0;
+
+    thead {
+      background-color: $theme-modal-tagbg;
+
+      tr:first-child {
+        color: $brand-primary;
+        text-transform: uppercase;
+
+        th {
+          vertical-align: top;
+        }
+      }
+    }
+    tbody {
+      tr {
+        background-color: $white;
+        &:nth-child(2n) {
+          background-color: $theme-table-nth;
+        }
+
+        td {
+          .table-row-actions {
+            @extend .d-flex;
+            @extend .align-items-center;
+            @extend .justify-content-center;
+
+            height: 100%;
+
+            .dropdown {
+              > .btn {
+                width: 45px;
+                height: 27px;
+                padding: 0;
+                @extend .d-flex;
+                @extend .align-items-center;
+                @extend .justify-content-center;
+                .fas {
+                  color: #a2a1a1;
+                  font-size: 20px;
+                  line-height: 9px;
+                }
+              }
+              button {
+                background: none;
+                border: none;
+                color: $theme-text;
+                box-shadow: none;
+              }
+
+              .dropdown-menu {
+                border-radius: 0;
+                margin: 0;
+                padding: 0;
+                z-index: 8;
+                &[x-placement='top-end'] {
+                  &::before {
+                    top: auto;
+                    right: 15px;
+                    bottom: -5px;
+                    transform: rotate(315deg);
+                  }
+                }
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  top: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  border: 3px solid black;
+                  border-color: transparent transparent $white $white;
+                  transform-origin: 0 0;
+                  transform: rotate(135deg);
+                  box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.07);
+                }
+
+                a {
+                  text-decoration: none;
+                }
+
+                & > button,
+                a > button {
+                  color: $dropdown-modal-tags;
+                  border-bottom: 1px solid rgba($theme-placeholder-text, 0.3);
+                  padding: 1rem;
+                  font-weight: 500;
+                }
+
+                & > button {
+                  &:last-child {
+                    border-bottom: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .actions-with-pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid $table-border-color;
+    border-top-width: 0;
+    background-color: $white;
+    height: 52px;
+    background-color: $white;
+
+    .actions {
+      span {
+        color: $brand-primary;
+        padding: 0 2.125rem;
+
+        @extend .lato-bold;
+
+        font-size: 0.875rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.btn-theme {
+  color: $white;
+  cursor: pointer;
+  border: 0;
+  padding: 15px 10px;
+  font-size: 16px;
+  min-width: 150px;
+  min-height: 56px;
+  line-height: 1.43;
+  letter-spacing: 0.2px;
+  text-decoration: none !important;
+  background-color: $brand-primary;
+
+  @include box-shadow(none);
+
+  @include transition(all 0.3s ease-in-out);
+
+  @include border-radius(4px);
+
+  //   @extend .text-center;
+
+  @extend .lato-bold;
+
+  &.theme-transparent {
+    color: $brand-primary;
+    border: 1px solid $brand-primary;
+    background-color: transparent;
+  }
+
+  &.btn-theme-success {
+    text-transform: uppercase;
+    background-color: $brand-tertiary !important;
+  }
+
+  &.btn-right {
+    margin-left: 560px;
+  }
+  &.theme-orange {
+    color: $white;
+    background-color: $brand-secondary;
+
+    &.orange-transparent {
+      color: $brand-secondary;
+      border: 1px solid $brand-secondary;
+      background-color: transparent;
+      &[disabled],
+      &:disabled,
+      &.disabled {
+        background-color: transparent;
+      }
+
+      &.orange-only-text {
+        padding: 0;
+        border-width: 0;
+        border-bottom-width: 1px;
+        border-radius: 0;
+        min-height: 0;
+        min-width: 0;
+        font-size: 14px;
+
+        @extend .lato-regular;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus:active,
+    &:focus:hover,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):active:focus {
+      opacity: 0.7;
+
+      @include box-shadow(none);
+    }
+
+    &[disabled],
+    &:disabled,
+    &.disabled {
+      background-color: $brand-secondary;
+    }
+  }
+
+  &.theme-black {
+    color: $theme-tertiary-text;
+    background-color: $brand-default;
+
+    &.black-transparent {
+      color: $theme-tertiary-text;
+      border: 1px solid $theme-tertiary-text;
+      background-color: transparent;
+    }
+
+    &:hover,
+    &:active,
+    &:focus:active,
+    &:focus:hover,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):active:focus {
+      opacity: 0.7;
+
+      @include box-shadow(none);
+    }
+
+    &[disabled],
+    &:disabled,
+    &.disabled {
+      background-color: $brand-default;
+    }
+  }
+
+  &.theme-cancel {
+    color: $theme-text !important;
+    border: 0 !important;
+    text-transform: uppercase;
+    background-color: transparent !important;
+  }
+
+  &.theme-back {
+    color: $theme-placeholder-text !important;
+    border: 0 !important;
+    text-transform: uppercase;
+    background-color: transparent !important;
+  }
+
+  &:hover,
+  &:active,
+  &:focus:active,
+  &:focus:hover,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus {
+    opacity: 0.7;
+
+    @include box-shadow(none);
+  }
+
+  &[disabled],
+  &:disabled,
+  &.disabled {
+    color: $white;
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: $brand-primary;
+  }
+}
+
+// Smalltalk CSS
+.smalltalk {
+  &:after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: 102;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .page {
+    z-index: 103;
+    position: relative;
+    min-width: auto;
+    max-width: 520px;
+    @include border-radius(4px);
+    .close-button {
+      top: 35px;
+      right: 30px;
+      cursor: pointer;
+      font-weight: 900;
+      background-image: none;
+      @extend .custom-fontawesome;
+      &:hover {
+        background-image: none;
+      }
+      &:before {
+        content: '\f00d';
+      }
+    }
+    header {
+      color: $brand-primary;
+      border: 0;
+      padding: 30px;
+      display: block;
+      font-size: 24px;
+      max-width: 100%;
+      line-height: 1;
+      background-color: $theme-table-nth;
+      @extend .lato-bold;
+      @include border-radius(4px);
+    }
+    .content-area {
+      color: $theme-text;
+      padding: 30px;
+      font-size: 16px;
+      > span {
+        font-size: 16px;
+      }
+      input {
+        color: $theme-text;
+        width: 100%;
+        height: 55px;
+        border: 1px solid $theme-placeholder-text;
+        padding: 0 1rem;
+        font-size: 16px;
+        margin-top: 17px;
+        @include border-radius(4px);
+      }
+    }
+    .action-area {
+      border: 0;
+      padding: 20px 30px;
+      border-top: 1px solid $gainsboro !important;
+      .button-strip {
+        display: flex;
+        button {
+          height: 45px;
+          padding: 0;
+          min-height: auto;
+          background-image: none;
+          @extend .btn-theme;
+          @extend .text-uppercase;
+          &[data-name='js-ok'] {
+            order: 1;
+            @extend .btn-theme-success;
+          }
+          &[data-name='js-cancel'] {
+            order: 0;
+            border: 0;
+            @extend .theme-black;
+            @extend .black-transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.new-facility-button {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: $brand-secondary;
+}
+
+.dropdown-with-dots .dropdown {
+  > button {
+    background: none !important;
+    border: none !important;
+    color: $black !important;
+    padding: 0;
+    box-shadow: none;
+    &:active {
+      box-shadow: none !important;
+      color: $black !important;
+    }
+  }
+  .dropdown-menu {
+    top: -3px !important;
+    left: 4px !important;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      right: 0;
+      box-sizing: border-box;
+      border: 3px solid black;
+      border-color: transparent transparent $white $white;
+      transform-origin: 0 0;
+      transform: rotate(135deg);
+      box-shadow: -2px 2px 2px 0 rgba($black, 0.07);
+    }
+  }
+  .dropdown-menu {
+    padding: 0;
+    button {
+      border-bottom: 1px solid rgba($theme-placeholder-text, 0.3);
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:active {
+        background-color: transparent !important;
+        color: $theme-text;
+      }
+    }
+  }
+}
+
+.search-container-common {
+  .local-search {
+    min-width: 100%;
+  }
+}
+
+.no-data-message {
+  font-size: 16px;
+  color: $theme-text;
+}
+
+.footer.footer-properties {
+  @include flex(flex-end, center);
+  position: fixed;
+  width: calc(100% - 224px);
+  bottom: 0;
+  left: 224px;
+  background: $white;
+  box-shadow: 0 -5px 14px 0 rgba(213, 213, 213, 0.42);
+  padding: 20px;
+  z-index: 9;
+  .leftItems {
+    height: auto;
+  }
+  button {
+    margin-bottom: 0;
+  }
+  @media (min-width: 1440px) {
+    width: calc(100% - 272px);
+    left: 272px;
+  }
+}
+
+.uploaded-list-wrapper {
+  > ul {
+    margin: 16px 0 0;
+    padding: 0;
+    overflow: auto;
+    max-height: 150px;
+    list-style-type: none;
+    > li {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+      .uploaded-doc {
+        height: 55px;
+        padding: 0 100px 0 14px;
+        flex-wrap: nowrap;
+        background-color: $table-row-alt-bg;
+        @include border-radius(4px);
+        .loader-section {
+          overflow: hidden;
+        }
+        .uploaded-doc-name {
+          color: $theme-secondary-text;
+          display: inline-block;
+          overflow: hidden;
+          font-size: 16px;
+          line-height: 19px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .remove-cancel-doc {
+          top: 50%;
+          right: 14px;
+          color: $error-msg;
+          border: 0;
+          padding: 12px 0;
+          background-color: transparent;
+          @include box-shadow(none);
+          @include translate(0, -50%);
+        }
+      }
+    }
+  }
+}

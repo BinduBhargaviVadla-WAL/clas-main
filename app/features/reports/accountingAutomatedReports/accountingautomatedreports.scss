@@ -1,0 +1,81 @@
+.account-reports {
+  .entity {
+    padding: 24px 12px 0px;
+    .select-wrapper {
+      label {
+        margin-bottom: 0;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #919191;
+      }
+      .select-dropdown__value-container {
+        width: 106px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.011em;
+        color: #535353;
+        .select-dropdown__single-value {
+          font-size: 20px !important;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .account-heading {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    align-items: center;
+    color: #2b2929;
+    margin-bottom: 35px;
+  }
+  .account-label-info {
+    margin-bottom: 16px;
+    .info-label-section {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      align-items: center;
+      color: #535353;
+    }
+    .select-wrapper {
+      width: auto !important;
+      .select-dropdown__control {
+        width: 144px;
+        @media (max-width: 1366px) {
+          width: 120px;
+        }
+      }
+    }
+  }
+  .account-card {
+    padding: 16px 24px;
+    background-color: #fffaea !important;
+    border: 0 !important;
+    border-radius: 10px;
+
+    .account-p {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: #878282;
+      margin-bottom: 10px;
+    }
+    .account-h {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      color: #3d3d3d;
+    }
+  }
+}
+hr {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}

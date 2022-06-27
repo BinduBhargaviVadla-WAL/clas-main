@@ -1,0 +1,184 @@
+.button.btn {
+  @include appearance(none);
+  @extend .lato-bold;
+
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  min-width: 150px;
+  border-radius: 4px;
+  // margin-bottom: $form-control-margin-bottom;
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+    box-shadow: none !important;
+  }
+
+  &:focus,
+  &:active {
+    border: 0;
+    box-shadow: none !important;
+  }
+
+  &.lg {
+    padding: 16px;
+    min-width: 100%;
+  }
+
+  &.md {
+    padding: 12px;
+    min-width: 50%;
+  }
+
+  &.sm {
+    padding: 6px;
+    min-width: 25%;
+  }
+
+  &.xs {
+    padding: 2px;
+    min-width: 20%;
+  }
+
+  &.primary {
+    background-color: $brand-primary;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $brand-primary !important;
+      color: $white;
+    }
+
+    &.outline {
+      background-color: $white;
+      border: 1px solid $brand-primary;
+      color: $brand-primary;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $white !important;
+        color: $brand-primary;
+      }
+    }
+
+    &.text {
+      color: $brand-primary;
+      background-color: transparent;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $brand-primary;
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  &.secondary {
+    background-color: $brand-secondary;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $brand-secondary !important;
+      color: $white;
+    }
+
+    &.outline {
+      background-color: $white;
+      border: 1px solid $brand-secondary !important;
+      color: $brand-secondary;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $white !important;
+        color: $brand-secondary;
+      }
+    }
+
+    &.text {
+      color: $brand-secondary;
+      background-color: transparent;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $brand-secondary;
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  &.tertiary {
+    background-color: $brand-tertiary;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $brand-tertiary !important;
+      color: $white;
+    }
+    &.outline {
+      background-color: $white;
+      border: 1px solid $brand-tertiary;
+      color: $brand-tertiary;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $white !important;
+        color: $brand-tertiary;
+      }
+    }
+
+    &.text {
+      color: $brand-tertiary;
+      background-color: transparent;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $brand-tertiary;
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  &.default {
+    background-color: $brand-default;
+    color: $theme-tertiary-text;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $brand-default !important;
+      color: $theme-tertiary-text !important;
+    }
+
+    &.outline {
+      background-color: $white;
+      border: 1px solid $theme-tertiary-text;
+      color: $theme-tertiary-text;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $white !important;
+        color: $theme-tertiary-text;
+      }
+    }
+
+    &.text {
+      color: $theme-tertiary-text;
+      background-color: transparent;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: transparent !important;
+        color: $theme-tertiary-text;
+      }
+    }
+  }
+}

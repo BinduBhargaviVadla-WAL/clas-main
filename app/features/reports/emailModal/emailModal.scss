@@ -1,0 +1,53 @@
+.EmailModalWrapper {
+  max-width: 800px !important;
+  min-width: 640px;
+}
+.Email-modal {
+  .Email-heading {
+    .info-label-section {
+      font-size: 20px;
+    }
+  }
+  .Email-sub-heading {
+    font-size: 14px;
+  }
+  .error-message {
+    color: #eb5757;
+  }
+  .Add-email {
+    .input-field {
+      width: 100%;
+      margin-right: 24px;
+      .input {
+        height: 56px;
+        background-color: #f3f0f0;
+        border-radius: 8px;
+        border: 0;
+        width: 100%;
+        padding: 16px;
+      }
+    }
+  }
+  .Sending-list {
+    p {
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .sending-list-item {
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+  .email-btn-section {
+    display: flex;
+    .send-btn {
+      width: 303px;
+    }
+    .btn-close {
+      min-width: 33%;
+      margin-left: 24px;
+      background-color: #f3f3f3;
+      color: #000000;
+    }
+  }
+}

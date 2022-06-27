@@ -1,0 +1,58 @@
+.DownloadModalWrapper {
+  max-width: 600px !important;
+  min-width: 500px;
+}
+.Download-modal {
+  .Download-heading {
+    margin-bottom: 18px;
+    .info-label-section {
+      font-size: 20px;
+    }
+  }
+  .Download-sub-heading {
+    font-size: 14px;
+  }
+  .Add-email {
+    .input-field {
+      width: 100%;
+      margin-right: 24px;
+      .input {
+        height: 56px;
+        background-color: #f3f0f0;
+        border-radius: 8px;
+        border: 0;
+        width: 100%;
+        padding: 16px;
+      }
+    }
+    .input-radio {
+      label {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+  .Sending-list {
+    p {
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .sending-list-item {
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+  .Download-btn-section {
+    width: 100%;
+    display: flex;
+    .send-btn {
+      min-width: 50%;
+    }
+    .btn-close {
+      min-width: 50%;
+      margin-left: 24px;
+      background-color: #f3f3f3;
+      color: #000000;
+    }
+  }
+}

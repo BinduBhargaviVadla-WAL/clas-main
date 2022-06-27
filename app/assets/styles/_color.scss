@@ -1,0 +1,159 @@
+// basic colors
+$white: #fff;
+$black: #000;
+// $red: #f00;
+
+// brand colors
+$brand-primary: #d38529;
+$brand-secondary: #2e7d32;
+$brand-tertiary: #60cf80;
+$brand-default: #e0e0e0;
+
+// theme colors
+$theme-text: #212121;
+$theme-primary-text: #333; // 84
+$theme-secondary-text: #616161; //66
+$theme-tertiary-text: #979797;
+$theme-placeholder-text: $theme-tertiary-text;
+$theme-success: #60cf80;
+$theme-priority-low: #33ea8f;
+$theme-priority-high: #fda831;
+$theme-table-nth: #f7fbf8; //30
+$theme-followup: #fcf59e; //31
+$table-row-alt-bg: #f7f7f7; //23
+$theme-modal-tagbg: #f1f1f1; //24
+$error-msg: #d0021b; // 6
+$dark-green: #195714;
+$theme-light-gray: #f3f3f3;
+$theme-priority-woUnassigned: #ed0034;
+$theme-priority-woAssigned: #fda831;
+$theme-priority-woClosed: #33ea8f;
+$theme-priority-woCancelled: #7882e9;
+
+// check if required
+// $table-row-alt-bg: #fbfbfb; // 6
+$theme-modal-tag: #b0b0b0; //10
+$selected-dates-color: #ebf9f5;
+$status-msg-color: #bc9f4e;
+$dropdown-modal-tags: #858585;
+$theme-not-submitted: #f1062b8f;
+
+// add any of the below colors only if no alternative is available from above
+// $table-border-color: #e0e0e0; //32 $brand-default
+// $theme-success: #60cf80; // 122 $brand-tertiary
+// $brand-black: #2d2d2d;
+$gainsboro: #e0e0e0; //98 $brand-default
+
+// Status Colors
+$theme-contactLeft: #dbcbff;
+$theme-scheduled-funeral: #917ac5;
+$theme-scheduled-funeralbg: #dbcbff;
+$theme-scheduled-cemetery: #2b86ed;
+$theme-scheduled-cemeterybg: #e9f2fd;
+$addendum-label: #9a4e51;
+$workOrder-headerText: #ffc0c0;
+$modal-dialog-title: #2e7d32;
+$theme-final-disposition: #788896;
+// $table-th-color: #878787; //18 $grey
+// $multi-selector-border: #e6e6e6; // 7
+// $light-grey: #d5d5d5;
+// $primary-bg: #f2f7f6; //10
+// $grey3: #c9c9c9;
+// $grey2: #424242;
+// $date-header-color: #6b7897;
+// $pervious-dates: #e1e4e7;
+
+// // checkbox colors
+// $grey1: #858585;
+// $light-grey2: #d8d8d8;
+// $suva-grey: #8a8a8a;
+// // $suva-grey-2: #8e8e8e;
+// $white-smoke: #efefef;
+// $snow: #fafafa;
+// // $mint-cream: #f7faf9;
+// $cinnabar: #e54545;
+// $cinnabar2: #ef0909;
+// $error-msg: #d0021b;
+$nero: #282828;
+
+// $secondary-bg: #fcf9f2;
+// $primary-bg: #f2f7f6;
+// $primary-border: #bde6de;
+// $table-row-alt-bg: #f7f7f7;
+$table-border-color: #e0e0e0;
+// $h1-color: #2d2d2d;
+// $theme-primary-text: #333;
+// $table-th-color: #878787;
+// $multi-selector-border: #e6e6e6;
+// $multi-selector-text: #858585;
+// $text-color: #333;
+// $dropdown-border: #d9d9d9;
+// $next-icon: #282828;
+// $table-dots: #a2a1a1;
+// // $daterange-next-color: #8c96ab;
+// $daterange-next-bgcolor: #f7f8fc;
+// $toggle-bg: #e7e7e7;
+$selected-item-text: #3f3f3f;
+// $cemetry-border-color: #d6d6d6;
+// $cementry-table-bg: #e0e066;
+// $trust-text-color: #bebebe;
+
+// $table-row-alt-bg: #fbfbfb;
+// $theme-secondary-text: #616161;
+// $theme-anchor-text: #2b86ed;
+// $theme-table-head: #f3f3f3;
+// $theme-table-nth: #f7fbf8;
+// $theme-success: #60cf80;
+$theme-success-text: #337a2e;
+// $theme-followup: #fcf59e;
+$theme-approval: #756e0e;
+// $theme-followup-text: #a39920;
+// $theme-converted: #b8caf9;
+// $theme-converted-text: #4a5574;
+// $theme-noContact: #ffc0c0;
+// $theme-appointmentSet: #c0e6ff;
+// $theme-pendingAppt: #fcbb8e;
+// $theme-contactLeft: #dbcbff;
+$theme-error-text: #ff2828;
+// $theme-assigned: #62b55c;
+$theme-assigned-text: #c4ffc0;
+$theme-status-success: #a0e6b2;
+$theme-status-inprogess: #fcf59e;
+$theme-static-color: #767676;
+// $theme-static-border: #eaeaea;
+// $theme-modal-tag: #b0b0b0;
+// $theme-modal-tagbg: #f1f1f1;
+// $theme-priority-high: #fda831;
+// $theme-priority-highl: #e6dba0;
+// $theme-priority-medium: #7882e9;
+// $theme-priority-mediuml: #b0e9ed;
+// $theme-priority-low: #33ea8f;
+// $theme-priority-lowl: #a6dac0;
+// $theme-ticket-open: #90aeff;
+// $theme-ticket-closed: #60cf80;
+// $theme-ticket-progress: #f57c00;
+// $theme-ticket-declined: #f0030f;
+// $theme-ticket-overdue: #ff683d;
+// $theme-scheduled-funeral: #917ac5;
+// $theme-scheduled-funeralbg: #dbcbff;
+// $theme-scheduled-cemetery: #2b86ed;
+// $theme-scheduled-cemeterybg: #e9f2fd;
+// $theme-scheduled-time: #62b55c;
+// $theme-scheduled-timebg: #c4ffc0;
+// $theme-item-remove: #ff7b7b;
+
+// $row-checked-bg: #edf8ff;
+// $filters-buttons-bg: #f4f4f4;
+// $diabled-selector: #cbcbcb;
+
+// //tags
+// $theme-future-tag: #dceffc;
+// $theme-active-tag: #ddffb7;
+// $theme-inactive-tag: #efefef;
+// $theme-expired-tag: #fbc1c1;
+
+// //tag-text-color
+// $text-future-tag: #7aa8c7;
+// $text-active-tag: #5c9d14;
+// $text-inactive-tag: #a1a1a1;
+// $text-expired-tag: #ff3f3f;

@@ -1,0 +1,35 @@
+.purchase-td {
+  span {
+    width: 180px;
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #878282;
+    padding-bottom: 6px;
+    &:first-child {
+      color: #3d3d3d;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+.business-td {
+  span {
+    width: 150px;
+    display: block;
+    padding-bottom: 6px;
+  }
+  span {
+    &:first-child {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    &:last-child {
+      margin-bottom: 8px;
+    }
+  }
+}
+.business-td ~ td {
+  vertical-align: bottom;
+}

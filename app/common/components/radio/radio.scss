@@ -1,0 +1,70 @@
+.radio {
+  padding-bottom: 32px;
+  margin-right: 20px;
+  display: inline-block;
+  margin-bottom: $form-control-margin-bottom;
+
+  cursor: pointer;
+  font-size: 16px;
+
+  @extend .lato-regular;
+
+  &.disabled {
+    label {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+  // &:last-of-type {
+  //   margin-left: 20px !important;
+  // }
+
+  input {
+    display: none;
+
+    + span {
+      @include border-radius(50%);
+      @include transition(all 0.3s ease-in-out);
+
+      width: 20px;
+      border: 1px solid $theme-tertiary-text;
+      height: 20px;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      background: $white;
+      margin-top: -3px;
+      margin-right: 5px;
+      i {
+        display: none;
+      }
+    }
+
+    &:checked {
+      + span {
+        @include border-radius(50%);
+        @include transition(all 0.3s ease-in-out);
+        background-color: white;
+        border: 1px solid #2e7d32;
+        background-color: white;
+        i {
+          // @include translate(-50%, -50%);
+          // @include transition(all 0.3s ease-in-out);
+          color: green;
+          display: block;
+          position: relative;
+          font-size: 14px;
+          bottom: 0;
+          top: 10%;
+          left: 0%;
+        }
+      }
+    }
+  }
+
+  .label {
+    line-height: 28px;
+    vertical-align: middle;
+    margin-left: 6px;
+  }
+}

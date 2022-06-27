@@ -1,0 +1,63 @@
+/* ==============================================================================
+******************   Font Styles For the Application   *************************
+============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+$lregular: 'Lato-Regular';
+$robotoslab: 'Roboto Slab', serif;
+$lato: 'Lato', sans-serif;
+
+// Font Weights
+$font-weight: (
+  light: 300,
+  regular: 400,
+  bold: 700,
+  extra-bold: 900
+);
+
+// Font Families
+.robotoslab-thin {
+  font-family: $robotoslab !important;
+  font-weight: 100 !important;
+}
+
+.robotoslab-light {
+  font-family: $robotoslab !important;
+  font-weight: 300 !important;
+}
+
+.robotoslab-regular {
+  font-family: $robotoslab !important;
+  font-weight: 400 !important;
+}
+
+.robotoslab-bold {
+  font-family: $robotoslab !important;
+  font-weight: 700 !important;
+}
+
+.lato-light {
+  font-family: $lato !important;
+  font-weight: 300 !important;
+}
+
+.lato-regular {
+  font-family: $lato !important;
+  font-weight: 400 !important;
+}
+
+.lato-bold {
+  font-family: $lato !important;
+  font-weight: 700 !important;
+}
+
+.lato-black {
+  font-family: $lato !important;
+  font-weight: 900 !important;
+}
+
+@mixin get-font($font, $weight) {
+  font-family: $font;
+  font-weight: map-get($map: $font-weight, $key: $weight) !important;
+}

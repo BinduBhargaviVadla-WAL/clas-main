@@ -1,0 +1,205 @@
+.select-wrapper {
+  width: 100%;
+  display: inline-block;
+
+  label {
+    line-height: 19px;
+    font-size: 16px;
+    margin-bottom: $form-label-margin-bottom;
+    color: $theme-text;
+
+    span {
+      color: $error-msg;
+    }
+  }
+
+  .input-right-content {
+    float: right;
+    font-size: 14px;
+  }
+
+  &.lg {
+    .select-dropdown__value-container {
+      width: 100%;
+      padding: 11px 15px;
+    }
+  }
+
+  &.md {
+    .select-dropdown__value-container {
+      width: 60%;
+      padding: 7px 12px;
+    }
+  }
+
+  &.sm {
+    .select-dropdown__control {
+      width: 103px;
+      height: 36px;
+      min-height: 36px;
+      @include box-shadow(none);
+    }
+  }
+
+  &.minimal {
+    @extend .mb-0;
+    width: auto;
+    min-width: 100px;
+
+    .select-dropdown__control {
+      border: none !important;
+      background-color: transparent;
+    }
+
+    .select-dropdown__value-container {
+      padding: 0 0 0 0px;
+      .select-dropdown__single-value {
+        color: $theme-secondary-text;
+      }
+    }
+
+    .select-dropdown__indicator {
+      padding: 0;
+      cursor: pointer;
+    }
+  }
+
+  .label-in-select {
+    @extend .lato-bold;
+
+    color: $theme-text;
+    margin: 0;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+  }
+
+  .select-dropdown__option {
+    cursor: pointer;
+    position: relative;
+
+    &--is-selected {
+      &::after {
+        top: 50%;
+        right: 5px;
+        padding: 4px;
+        border-radius: 50%;
+        font-size: 10px;
+        content: '\f00c';
+        position: absolute;
+        font-weight: 900;
+        color: $white;
+        background-color: $brand-primary;
+
+        @include translate(-50%, -50%);
+
+        @extend .custom-fontawesome;
+      }
+
+      background-color: $white !important;
+    }
+
+    &--is-focused {
+      background-color: $brand-default !important;
+    }
+
+    &--is-disabled {
+      cursor: not-allowed;
+      color: $theme-tertiary-text !important;
+    }
+  }
+
+  > .select-dropdown--is-disabled {
+    cursor: not-allowed !important;
+    pointer-events: initial !important;
+    .select-dropdown__single-value--is-disabled {
+      color: $theme-tertiary-text !important;
+    }
+  }
+
+  .select-dropdown__control {
+    border: 1px solid $theme-tertiary-text !important;
+    box-shadow: none;
+    cursor: pointer;
+
+    &.select-dropdown__control--is-disabled {
+      background-color: #f2f2f2;
+      cursor: not-allowed !important;
+    }
+
+    .select-dropdown__placeholder {
+      color: $theme-tertiary-text;
+      font-size: 16px;
+    }
+
+    .select-dropdown__single-value,
+    .select-dropdown__input {
+      color: $theme-text;
+      font-size: 16px;
+    }
+
+    .select-dropdown__indicator-separator {
+      display: none;
+    }
+  }
+
+  .select-dropdown__value-container--is-multi {
+    height: 32px;
+    overflow-y: auto;
+
+    .select-dropdown__multi-value {
+      background-color: transparent;
+      color: $theme-tertiary-text;
+
+      .select-dropdown__multi-value__label {
+        color: $theme-tertiary-text;
+      }
+    }
+  }
+
+  .select-dropdown__menu {
+    z-index: 3;
+    margin-top: 2px !important;
+    border: solid 1px $brand-default;
+    @include box-shadow(0 7px 10px 0 rgba(0, 0, 0, 0.19));
+    @include border-radius(0);
+
+    .select-dropdown__menu-list {
+      .select-dropdown__option {
+        color: $theme-primary-text;
+        font-size: 14px;
+        padding: 14px 38px 14px 17px;
+        border-bottom: solid 1px $brand-default;
+        background-color: transparent;
+        word-break: break-word;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      .select-dropdown__group {
+        border-bottom: solid 1px $brand-default;
+        padding: 0;
+        .select-dropdown__group-heading {
+          color: $theme-text;
+          font-size: 14px;
+          font-weight: 700;
+          margin: 0;
+          padding-top: 8px;
+          text-transform: capitalize;
+        }
+        .select-dropdown__option {
+          padding: 10px 10px 10px 22px;
+        }
+      }
+    }
+  }
+}
+
+.multi-label-select {
+  display: flex;
+  flex-direction: column;
+  .second-label {
+    margin-left: '10px';
+    color: #a6a6a6;
+  }
+}

@@ -1,0 +1,31 @@
+@import '../styles/color';
+
+.d-flex {
+  display: flex;
+}
+
+.text-ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.theme-error {
+  color: $error-msg !important;
+}
+
+.custom-fontawesome {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: 'Font Awesome\ 5 Free';
+}
+
+.simple-box-shadow {
+  @include box-shadow(0 5px 14px 0 rgba(0, 0, 0, 0.08));
+}

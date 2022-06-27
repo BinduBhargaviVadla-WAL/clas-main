@@ -1,0 +1,20 @@
+{
+  "name": "cypress-lawn-hmis-application",
+  "productName": "HMISAPP",
+  "version": "0.0.7",
+  "description": "HMIS app Desktop Application",
+  "main": "./main.prod.js",
+  "author": {
+    "name": "westagilelabs",
+    "url": "https://www.westagilelabs.com"
+  },
+  "scripts": {
+    "electron-rebuild": "node -r ../internals/scripts/BabelRegister.js ../internals/scripts/ElectronRebuild.js",
+    "postinstall": "yarn electron-rebuild"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "sequelize": "4.42.0",
+    "sqlite3": "4.0.9"
+  }
+}

@@ -1,0 +1,18 @@
+// import library styles
+// Font awesome moved to html
+@import '~bootstrap/scss/bootstrap';
+
+@import '../app/assets/styles/utils.scss';
+@import '../app/assets/styles/_fonts.scss';
+@import '../app/assets/styles/_color.scss';
+@import '../app/assets/styles/_variables.scss';
+@import '../app/assets/styles/_mixins.scss';
+@import '../app/assets/styles/_common.scss';
+
+// common components and features
+@import '../app/common/components/components.scss';
+
+
+// application features
+@import '../app/features/features.scss';
+

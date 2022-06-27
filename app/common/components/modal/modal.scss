@@ -1,0 +1,37 @@
+.modalProperties {
+  max-width: 900px !important;
+  height: 100%;
+  .title {
+    color: $modal-dialog-title;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+}
+
+.modal-dialog {
+  .title .modal-title,
+  .modal-title {
+    color: $modal-dialog-title;
+    text-transform: uppercase;
+  }
+}
+
+.modal-dialog .modal-body {
+  .row {
+    .col-sm-4 {
+      &:nth-of-type(3n) {
+        .react-datepicker-popper {
+          left: auto !important;
+          right: 0 !important;
+          .react-datepicker:before {
+            left: auto;
+            right: 60px;
+          }
+          .react-datepicker-time__input {
+            height: auto !important;
+          }
+        }
+      }
+    }
+  }
+}
